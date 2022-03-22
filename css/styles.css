@@ -1,0 +1,464 @@
+   /* global css*/
+   
+   * {
+       box-sizing: border-box;
+       scroll-behavior: smooth;
+   }
+   
+   body {
+       margin: 0;
+       padding: 0;
+       font-family: 'Poppins', sans-serif;
+   }
+   
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6,
+   p {
+       margin: 0;
+       font-weight: bold;
+   }
+   
+   a,
+   a:hover {
+       display: inline-block;
+       text-decoration: none;
+   }
+   
+   .container {
+       max-width: 80%;
+       margin: 0 auto;
+       width: 100%;
+   }
+   
+   ul,
+   ol {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+   }
+   /* global css ends here*/
+   /* Header css starts here */
+   
+   header {
+       background: #20003A;
+       position: absolute;
+       width: 100%;
+       z-index: 999999;
+   }
+   
+   header .header-inner {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       height: 17vh;
+   }
+   
+   header .menu ul {
+       display: flex;
+   }
+   
+   header .menu ul li {
+       margin-left: 20px;
+   }
+   
+   header .menu ul li.active a {
+       background: #FF9827;
+       border: 2px solid #FF9827;
+   }
+   
+   header .menu ul li a {
+       font-size: 20px;
+       line-height: 26px;
+       font-weight: 700;
+       color: #fff;
+       border-radius: 6px;
+       padding: 15px 25px;
+       display: inline-block;
+       text-align: center;
+       transition: all ease .5s;
+   }
+   
+   header .menu ul li.active a:hover {
+       background: #20003A;
+       color: #FF9827;
+   }
+   
+   header .menu ul li a:hover {
+       color: #FF9827;
+   }
+   /* Banner css starts here */
+   
+   .banner {
+       position: absolute;
+       top: 17vh;
+       left: 0;
+       width: 100%;
+       height: 100%;
+   }
+   
+   .slideshow {
+       position: relative;
+       z-index: 1;
+       height: 83vh;
+       background: #20003A;
+   }
+   
+   .slideshow .slider-track {
+       transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+   }
+   
+   .slideshow .item {
+       height: 83vh;
+       position: relative;
+       z-index: 1;
+   }
+   
+   .slideshow .item img {
+       width: 100%;
+       transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+       transform: scale(1.2);
+   }
+   
+   .slideshow .item.slick-active img {
+       transform: scale(1);
+   }
+   
+   .slideshow .slider-content {
+       position: absolute;
+       left: 10%;
+       top: 10%;
+       max-width: 400px;
+   }
+   
+   .slideshow .slider-content h3 {
+       font-size: 80px;
+       line-height: 100px;
+       font-weight: 800;
+       color: #fff;
+       margin-bottom: 20px;
+   }
+   
+   .slideshow .slider-content h3 span {
+       display: inline-block;
+       position: relative;
+   }
+   
+   .slideshow .slider-content h3 span:after {
+       content: '';
+       border-bottom: 4px solid #fff;
+       position: absolute;
+       bottom: 10px;
+       width: 100%;
+       left: 2%;
+   }
+   
+   .slideshow .slider-content p {
+       font-size: 26px;
+       line-height: 39px;
+       font-weight: 600;
+       color: #fff;
+       margin-bottom: 20px;
+   }
+   
+   .slideshow .slider-content a {
+       font-size: 20px;
+       line-height: 26px;
+       font-weight: 700;
+       color: #fff;
+       border-radius: 6px;
+       padding: 15px 25px;
+       display: inline-block;
+       text-align: center;
+       background: #FF9827;
+       border: 2px solid #FF9827;
+       transition: all ease .5s;
+   }
+   
+   .slideshow .slider-content a:hover {
+       background: #20003A;
+       color: #FF9827;
+   }
+   /* sos cards ***************************************/
+   
+   .sos-cards {
+       text-align: center;
+       position: fixed;
+       width: 100%;
+       height: 100%;
+   }
+   
+   .sos-cards .heading {
+       padding-top: 80px;
+       opacity: 1;
+   }
+   
+   .sos-cards h1 {
+       font-size: 50px;
+       line-height: 60px;
+       color: #20003a;
+   }
+   
+   .sos-cards h2 {
+       color: #20003a;
+       font-size: 30px;
+       line-height: 51px;
+   }
+   
+   .sos-cards .card1 {
+       max-width: 230px;
+       min-height: 365px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+   }
+   
+   .sos-cards .card1 .main-card {
+       position: relative;
+   }
+   
+   .sos-cards .card1 .main-card img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+   
+   .sos-cards .flip {
+       position: absolute;
+       left: 0;
+       top: 0;
+       transform: rotateY(90deg);
+       width: 100%;
+       height: 100%;
+   }
+   
+   .sos-cards .fix {
+       position: relative;
+   }
+   
+   .sos-cards .card1 .main-card .cable-1 {
+       position: absolute;
+       left: 0px;
+       right: -180px;
+       bottom: 93px;
+       width: 100px;
+       height: 100px;
+       margin-right: auto;
+       margin-left: auto;
+       z-index: 10;
+   }
+   
+   .sos-cards .card1 .main-card .cable-2 {
+       position: absolute;
+       left: 0px;
+       right: -185px;
+       bottom: -13px;
+       width: 100px;
+       height: 100px;
+       margin-right: auto;
+       margin-left: auto;
+       z-index: 10;
+   }
+   
+   .sos-cards .card1 .main-card .cable-3 {
+       position: absolute;
+       right: -212px;
+       bottom: 100px;
+       width: 150px;
+       height: 150px;
+       transform: translate(50px, 0);
+   }
+   
+   .sos-cards .card1 .main-card .cable-4 {
+       position: absolute;
+       left: -120px;
+       bottom: -80px;
+       width: 150px;
+       height: 178px;
+       transform: translate(-50px, 0);
+   }
+   
+   .sos-cards .card1 .main-card .cable {
+       opacity: 0;
+   }
+   
+   .sos-cards .opacity {
+       opacity: 1;
+       transform: translate(0, 0);
+   }
+   
+   .sos-cards .flipcard-text .chip {
+       position: absolute;
+       width: 143px !important;
+       height: 140px !important;
+       top: 19%;
+       left: 19.5%;
+   }
+   
+   .sos-cards .flipcard-text .plug {
+       left: 280px;
+       position: absolute;
+       width: 190px !important;
+       height: 357px !important;
+       top: 1%;
+       object-fit: inherit !important;
+   }
+   
+   .sos-cards .iphone-side-section {
+       position: fixed;
+       z-index: -1;
+       top: 35%;
+       left: 50%;
+   }
+   
+   .sos-cards .iphone-12 {
+       object-fit: inherit !important;
+       position: relative;
+       width: 262px !important;
+       height: 530px !important;
+       transform: translate(-50%, -50%);
+       opacity: 0;
+   }
+   
+   .sos-cards .slides {
+       position: absolute;
+       width: 200px !important;
+       height: 80px !important;
+       object-fit: inherit !important;
+   }
+   
+   .sos-cards .slide-1 {
+       position: absolute;
+       top: -32%;
+       right: -32%;
+   }
+   
+   .sos-cards .slide-2 {
+       position: absolute;
+       top: -17%;
+       left: -345px;
+   }
+   
+   .sos-cards .slide-3 {
+       position: absolute;
+       top: 0%;
+       right: -38%;
+   }
+   
+   .sos-cards .slide-4 {
+       position: absolute;
+       top: 22%;
+       left: -357px;
+   }
+   
+   .sos-cards .slide-5 {
+       position: absolute;
+       top: 30%;
+       right: -34%;
+   }
+   
+   .sos-cards .dark-bg {
+       background-color: #20003a;
+       position: fixed;
+       width: 100%;
+       min-height: 100vh;
+       z-index: -1;
+       top: 0;
+   }
+   
+   .sos-cards .slimmest-charger {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       min-height: 100vh;
+   }
+   
+   .sos-cards .slimmest-charger .sl-charger {
+       width: 11px !important;
+       height: 345px !important;
+   }
+   
+   .sos-cards .slimmest-charger .sl-phone {
+       position: absolute;
+       width: 40px !important;
+       height: 480px !important;
+       object-fit: inherit !important;
+       top: -5%;
+       left: 18%;
+   }
+   
+   .sos-cards .slimmest-charger .sl-text {
+       position: absolute;
+       width: 200px !important;
+       height: 200px !important;
+       object-fit: inherit !important;
+       top: -3%;
+       right: -62%;
+   }
+   
+   .sos-cards .slimmest-charger .sl-text-bottom {
+       position: absolute;
+       width: 200px !important;
+       height: 200px !important;
+       object-fit: inherit !important;
+       top: 20%;
+       right: -62%;
+   }
+   
+   .sos-cards .battery {
+       position: fixed;
+       width: 100%;
+       min-height: 100vh;
+       top: 0;
+   }
+   
+   .sos-cards .light-bg {
+       background-color: #ff9a25;
+       position: fixed;
+       width: 100%;
+       min-height: 100vh;
+       z-index: -1;
+       top: 0;
+   }
+   
+   .sos-cards .battery .battery-wrap {
+       position: absolute;
+       width: 270px !important;
+       height: 400px !important;
+       object-fit: inherit !important;
+       top: 40%;
+       right: 43%;
+       z-index: 2;
+   }
+   
+   .sos-cards .battery .battery-wrap-top {
+       position: absolute;
+       width: 269px !important;
+       height: 97px !important;
+       object-fit: inherit !important;
+       opacity: 0;
+       top: 29%;
+       right: 42%;
+       transform: rotate( 104deg);
+       transform-origin: bottom right;
+   }
+   
+   .sos-cards .hidden-div {
+       width: 230px;
+       height: 365px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+   }
+   
+   .sos-cards .hidden-div .hidden-card {
+       width: 100%;
+       height: 100%;
+       object-fit: inherit;
+   }
